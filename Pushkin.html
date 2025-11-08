@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Урок о жизни и творчестве А. С. Пушкина</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-image: url('Push.jpeg');
+      background-attachment: fixed;
+      background-size: cover;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      line-height: 1.6;
+      color: #fff;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 850px;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.85);
+      border-radius: 18px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+    h1 {
+      color: gold;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2.2em;
+    }
+    h2 {
+      color: silver;
+      text-align: center;
+      margin-bottom: 35px;
+      font-size: 1.5em;
+    }
+    .nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 22px;
+      margin: 25px 0 40px;
+    }
+    .nav a {
+      color: gold;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 18px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      background-color: rgba(255, 215, 0, 0.2);
+    }
+    .nav a:hover {
+      background-color: rgba(255, 215, 0, 0.4);
+      transform: scale(1.05);
+    }
+    .section {
+      color: #e0e0e0;
+      padding: 28px;
+      border-radius: 12px;
+      margin: 30px 0;
+      background-color: rgba(255, 255, 255, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+    .section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: gold;
+    }
+    .section h3 {
+      color: gold;
+      margin-bottom: 22px;
+      font-size: 1.7em;
+      text-align: center;
+    }
+    .quote {
+      background-color: rgba(255, 255, 255, 0.18);
+      border-left: 4px solid gold;
+      padding: 20px 25px;
+      margin: 25px 0 30px;
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      position: relative;
+    }
+    .quote::before {
+      content: '«';
+      font-size: 32px;
+      opacity: 0.7;
+      position: absolute;
+      top: -6px;
+      left: -28px;
+      color: gold;
+    }
+    .quote::after {
+      content: '»';
+      font-size: 32px;
+      opacity: 0.7;
+      position: absolute;
+      bottom: -22px;
+      right: -28px;
+      color: gold;
+    }
+    .quote-author {
+      text-align: right;
+      font-size: 15px;
+      margin-top: 16px;
+      color: silver;
+    }
+    .reading-title {
+      text-align: center;
+      color: white;
+      font-size: 1.4em;
+      margin: 30px 0 20px;
+      letter-spacing: 1px;
+      position: relative;
+    }
+    .reading-title::after {
+      content: '';
+      display: block;
+      width: 90px;
+      height: 2px;
+      background: gold;
+      margin: 10px auto 0;
+      border-radius: 1px;
+    }
+    .reading-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 14px;
+      padding: 0 15px;
+    }
+    .author {
+      background-color: rgba(255, 255, 255, 0.14);
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 215, 0, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+    .author::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 215, 0, 0.08);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .author:hover {
+      background-color: rgba(255, 215, 0, 0.22);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+    .author:hover::before {
+      opacity: 1;
+    }
+    p {
+      margin-bottom: 16px;
+      text-align: justify;
+    }
+    @media (max-width: 700px) {
+      .container {
+        margin: 15px;
+        padding: 20px;
+      }
+      .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+      .section {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 1.9em;
+      }
+      h2 {
+        font-size: 1.3em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Александр Сергеевич Пушкин (1799–1837)</h1>
+    <h2>Жизнь и творчество «солнца русской поэзии»: урок для школьников</h2>
+
+
+    <!-- Навигация -->
+    <div class="nav">
+      <a href="#childhood">Детство</a>
+      <a href="#lyceum">Лицей</a>
+      <a href="#exile">Южная ссылка</a>
+      <a href="#mikhailovskoye">Михайловское</a>
+      <a href="#bolдино">Болдинская осень</a>
+      <a href="#later">Зрелые годы и конец пути</a>
+    </div>
+
+
+    <!-- Раздел «Детство» -->
+    <section class="section" id="childhood">
+      <h3>Детство (1799–1811)</h3>
+      <p>6 июня (26 мая по старому стилю) 1799 года в Москве родился Александр Сергеевич Пушкин. Мальчик рос в дворянской семье, где книги были постоянными спутниками: отец обладал обширной библиотекой, а дядя писал стихи.</p>
+
+      <div class="quote">
+        «Не знаю, что выйдет из моего
+старшего внука. Мальчик умён и
+охотник до книжек, а учится плохо,
+редко когда урок свой сдаст порядком;
+то его не расшевелишь, не прогонишь
+играть с детьми, то вдруг так
+развернётся и расходится, что ничем
+его не уймёшь: из одной крайности
+в другую бросается, нет у него
+середины» (Мария Алексеевна).
+</div class="quote">
+      <p>
+        После возвращения из ссылки Пушкин активно публиковался...<br>
+        [Вставьте здесь подробный текст о зрелом периоде]
+      </p>
+    </div>
+  </div>
+</body>
+</html>
+
+
