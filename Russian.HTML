@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Части речи в русском языке</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #2c3e50;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    header {
+      background: #2980b9;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #2980b9;
+      margin: 30px 0 15px 0;
+      font-size: 1.8em;
+      border-bottom: 3px solid #3498db;
+      padding-bottom: 8px;
+    }
+    h3 {
+      color: #16a085;
+      margin: 20px 0 10px 0;
+      font-size: 1.4em;
+    }
+    p {
+      margin-bottom: 12px;
+      padding: 0 15px;
+    }
+    .section {
+      padding: 25px;
+      border-bottom: 1px solid #ecf0f1;
+    }
+    .card {
+      background-color: #f8f9fa;
+      border-left: 4px solid #3498db;
+      border-radius: 0 8px 8px 0;
+      padding: 15px 20px;
+      margin: 15px 0;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateX(5px);
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    .example {
+      background-color: #e8f4fd;
+      border-color: #3498db;
+      padding: 12px 18px;
+      border-radius: 6px;
+    }
+    .task {
+      background-color: #fff8e1;
+      border-color: #f39c12;
+      padding: 15px 20px;
+      border-radius: 6px;
+      margin-top: 15px;
+    }
+    code {
+      font-family: 'Courier New', monospace;
+      background-color: #ecf0f1;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    th, td {
+      border: 1px solid #bdc3c7;
+      padding: 12px 15px;
+      text-align: left;
+    }
+    th {
+      background-color: #3498db;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    .btn {
+      display: inline-block;
+      background: #27ae60;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 10px 0;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #219653;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2c3e50;
+      color: white;
+      font-style: italic;
+    }
+    /* Интерактивные блоки */
+    .quiz {
+      background-color: #dcedc8;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      border-left: 5px solid #8bc34a;
+    }
+    .question {
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #388e3c;
+    }
+    .options {
+      margin-left: 20px;
+    }
+    .option {
+      margin: 10px 0;
+    }
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Части речи в русском языке</h1>
+      <p>Интерактивный учебный модуль: теория, примеры, задания</p>
+    </header>
+
+    <div class="section">
+      <h2>Что такое части речи?</h2>
+      <p>В русском языке слова делятся на группы — <strong>части речи</strong>. Каждая часть речи имеет свои признаки, отвечает на определённые вопросы и выполняет свою роль в предложении.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Часть речи</th>
+            <th>Что обозначает</th>
+            <th>Вопросы</th>
+            <th>Пример</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Существительное</td><td>Предмет</td><td>кто? что?</td><td>книга, учитель</td></tr>
+          <tr><td>Прилагательное</td><td>Признак предмета</td><td>какой? какая?</td><td>синий, высокая</td></tr>
+          <tr><td>Глагол</td><td>Действие</td><td>что делать?</td><td>читать, бежать</td></tr>
+          <tr><td>Местоимение</td><td>Указывает на предмет</td><td>-</td><td>я, ты, он</td></tr>
+          <tr><td>Наречие</td><td>Признак действия</td><td>как? где? когда?</td><td>быстро, вчера</td></tr>
+          <tr><td>Числительное</td><td>Количество/порядок</td><td>сколько? который?</td><td>пять, третий</td></tr>
+          <tr><td>Предлог</td><td>Связывает слова</td><td>-</td><td>в, на, под</td></tr>
+          <tr><td>Союз</td><td>Соединяет части предложения</td><td>-</td><td>и, а, но</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Существительное -->
+    <div class="section">
+      <h2>1. Имя существительное</h2>
+      <div class="card">
+        <p><strong>Что обозначает:</strong> предмет.</p>
+        <p><strong>Отвечает на вопросы:</strong> кто? что?</p>
+        <p><strong>Морфологические признаки:</strong> род, число, падеж, одушевлённость/неодушевлённость.</p>
+
+        <div class="example">
+          <p>В саду расцвела <code>роза</code>.</p>
+          <p>(<code>роза</code> — существительное, ж. р., ед. ч., Им. п.)</p>
+        </div>
+        <div class="task">
+          <h4>Задание</h4>
+          <p>Найдите существительные в предложении:</p>
+          <p><em>Утром девочка поливала цветы в горшках.</em></p>
+          <button class="btn" onclick="alert('Ответ: девочка, цветы, горшках')">Показать ответ</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Прилагательное -->
+    <div class="section">
+      <h2>2. Имя прилагательное</h2>
+      <div class="card">
+        <p><strong>Что обозначает:</strong> признак предмета.</p>
+        <p><strong>Отвечает на вопросы:</strong> какой? какая? какое? какие?</p>
+        <p><strong>Изменяется по:</strong> родам, числам, падежам.</p>
+        <div class="example">
+          <p>На столе лежит <code>толстая</code> книга.</p>
+          <p>(<code>толстая</code> — прилагательное, ж. р., ед. ч., Им. п.)</p>
+        </div>
+        <div class="task">
+          <h4>Задание</h4>
+          <p>Подберите прилагательные к существительным:</p>
+          <ul>
+            <li>солнце (какое?) — ...</li>
+            <li>дом (какой?) — ...</li>
+            <li>цветы (какие?) — ...</li>
+          </ul>
+          <button class="btn" onclick="alert('Примеры ответов: яркое солнце, высокий дом, красивые цветы')">Проверить</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Глагол -->
+    <div class="section">
+      <h2>3. Глагол</h2>
+      <div class="card">
+        <p><strong>Что обозначает:</strong> действие или состояние.</p>
+        <p><strong>Отвечает на вопросы:</strong> что делать? что сделать?</p>
+        <p><strong>Основные формы:</strong> инфинитив, настоящее/прошедшее/будущее время.</p>
+        <div class="example">
+          <p>Я <code>читаю</code> книгу и <code>думаю</code> о путешествии.</p>
+          <p>(<code>читаю</code>, <code>думаю</code> — глаголы, наст. вр., 1 л., ед. ч.)</p>
+        </div>
+        <div class="quiz">
+          <div class="question">Выберите глагол:</div>
+          <div class="options">
+            <label class="option"><input type="radio" name="verb" value="0"> красивый</label>
+            <label class="option"><input type="radio" name="verb" value="1"> бежать</label>
+            <label class="option"><input type="radio" name="verb" value="0"> быстро</label>
+          </div>
+          <button class="btn" onclick="checkVerb()">Проверить</button>
+          <div id="verbResult" class="result"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Местоимение -->
+    <div class="section">
+      <h2>4. Местоимение</h2>
+      <div class="card">
+        <p><strong>Что обозначает:</strong> указывает на предмет, не называя его.</p>
+        <p><strong>Группы:</strong> личные, указательные, вопросительные и др.</p>
+        <div class="example">
+          <p><code>Он</code> прочитал книгу, а <code>я</code> взял другую.</p>
+          <p>(<code>он</code>, <code>я</code> — личные местоимения)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Наречие -->
+    <div class="section">
+      <h2>5. Наречие</h2>
+      <div class="card">
+        <p><strong>Что обозначает:</strong> признак действия, признака или состояния.</p>
+        <p><strong>Отвечает на вопросы:</strong> как? где? когда? куда? откуда? почему? зачем?</p>
+        <p><strong>Не изменяется</strong> (нет рода, числа, падежа).</p>
+        <div class="example">
+          <p>Он бежал <code>быстро</code> и вернулся <code>вчера</code>.</p>
+          <p>(<code>быстро</code> — наречие образа действия; <code>вчера</code> — наречие времени)</p>
+        </div>
+        <div class="quiz">
+          <div class="question">Какое слово является наречием?</div>
+          <div class="options">
+            <label class="option"><input type="radio" name="adverb" value="0"> красный</label>
+            <label class="option"><input type="radio" name="adverb" value="0"> бежать</label>
+            <label class="option"><input type="radio" name="adverb" value="1"> громко</label>
+          </div>
+          <button class="btn" onclick="checkAdverb()">Проверить</button>
+          <div id="adverbResult" class="result"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Числительное -->
+    <div class="section">
+      <h2>6. Имя числительное</h2>
+      <div class="card">
+        <p><strong>Что обозначает:</strong> количество или порядок при счёте.</p>
+        <p><strong>Отвечает на вопросы:</strong> сколько? который?</p>
+        <p><strong>Виды:</strong> количественные (<em>пять</em>), порядковые (<em>третий</em>).</p>
+        <div class="example">
+          <p>В классе <code>двадцать</code> учеников, <code>третий</code> ряд свободен.</p>
+          <p>(<code>двадцать</code> — количественное; <code>третий</code> — порядковое)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Служебные части речи -->
+    <div class="section">
+      <h2>Служебные части речи</h2>
+
+      <!-- Предлог -->
+      <div class="card">
+        <h3>7. Предлог</h3>
+        <p><strong>Для чего служит:</strong> связывает слова в словосочетании и предложении.</p>
+        <p><strong>Примеры:</strong> в, на, под, над, о, к, с, от, до.</p>
+        <div class="example">
+          <p>Книга лежит <code>на</code> столе, а ручка — <code>под</code> книгой.</p>
+          <p>(<code>на</code>, <code>под</code> — предлоги)</p>
+        </div>
+      </div>
+
+      <!-- Союз -->
+      <div class="card">
+        <h3>8. Союз</h3>
+        <p><strong>Для чего служит:</strong> соединяет однородные члены или части сложного предложения.</p>
+        <p><strong>Примеры:</strong> и, а, но, или, что, чтобы.</p>
+        <div class="example">
+          <p>Я читаю <code>и</code> пишу, <code>но</code> не рисую.</p>
+          <p>(<code>и</code>, <code>но</code> — союзы)</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 2025 Учебный модуль «Части речи». Все права защищены.
+    </footer>
+  </div>
+
+  <script>
+    function checkVerb() {
+      const selected = document.querySelector('input[name="verb"]:checked');
+      const result = selected && selected.value === '1' ? 
+'Правильно! "Бежать" — это глагол.' :
+        'Неверно. Попробуйте ещё раз.';
+      document.getElementById('verbResult').textContent = result;
+    }
+
+    function checkAdverb() {
+      const selected = document.querySelector('input[name="adverb"]:checked');
+      const result = selected && selected.value === '1' ?
+        'Правильно! "Громко" — это наречие.' :
+        'Неверно. Попробуйте ещё раз.';
+      document.getElementById('adverbResult').textContent = result;
+    }
+
+    // Дополнительно: можно добавить скрипты для других интерактивных блоков
+    // Например, для проверки задания с прилагательными
+    function checkAdjectiveTask() {
+      alert('Проверьте свои ответы: яркое солнце, высокий дом, красивые цветы.');
+    }
+  </script>
+  <title>Тест: определи части речи</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      line-height: 1.8;
+    }
+    .test-container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    .text-block {
+      background-color: #eef;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .word-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px dashed #ccc;
+    }
+    .word {
+      font-weight: bold;
+      min-width: 120px;
+    }
+    select {
+      padding: 5px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      min-width: 180px;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .correct {
+      background-color: #dff0d8;
+      color: #3c763d;
+    }
+    .incorrect {
+      background-color: #f2dede;
+      color: #a94442;
+    }
+  </style>
+</head>
+<body>
+  <div class="test-container">
+    <h2>Тест: определи части речи</h2>
+    <div class="text-block">
+      Прочитайте предложение и для каждого слова выберите его часть речи.
+    </div>
+
+    <!-- Предложение для разбора -->
+    <p><strong>Предложение:</strong> Ветер сильно шумел в кронах деревьев.</p>
+
+
+    <!-- Блоки для слов -->
+    <div id="wordList"></div>
+
+    <button onclick="checkAnswers()">Проверить ответы</button>
+    <div id="result" class="result"></div>
+  </div>
+
+  <script>
+    // Слова предложения и их правильные части речи
+    const sentenceWords = [
+      { word: 'Ветер', pos: 'существительное' },
+      { word: 'сильно', pos: 'наречие' },
+      { word: 'шумел', pos: 'глагол' },
+      { word: 'в', pos: 'предлог' },
+      { word: 'кронах', pos: 'существительное' },
+      { word: 'деревьев', pos: 'существительное' }
+    ];
+
+    // Варианты частей речи для выпадающих списков
+    const posOptions = [
+      'существительное',
+      'прилагательное',
+      'глагол',
+      'местоимение',
+      'наречие',
+      'числительное',
+      'предлог',
+      'союз',
+      'частица',
+      'междометие'
+    ];
+
+    // Генерируем поля для каждого слова
+    function renderWordFields() {
+      const container = document.getElementById('wordList');
+      container.innerHTML = ''; // Очищаем
+
+      sentenceWords.forEach((item, index) => {
+        const row = document.createElement('div');
+        row.className = 'word-row';
+
+        const wordLabel = document.createElement('span');
+        wordLabel.className = 'word';
+        wordLabel.textContent = item.word;
+
+        const select = document.createElement('select');
+        select.id = `pos-${index}`;
+
+        posOptions.forEach(pos => {
+          const option = document.createElement('option');
+          option.value = pos;
+          option.textContent = pos;
+          select.appendChild(option);
+        });
+
+        row.appendChild(wordLabel);
+        row.appendChild(select);
+        container.appendChild(row);
+      });
+    }
+
+    // Проверка ответов
+    function checkAnswers() {
+      let correct = 0;
+      const total = sentenceWords.length;
+      const resultDiv = document.getElementById('result');
+
+      sentenceWords.forEach((item, index) => {
+        const userSelect = document.getElementById(`pos-${index}`);
+        const userAnswer = userSelect.value;
+        const correctAnswer = item.pos;
+
+
+        if (userAnswer === correctAnswer) {
+          correct++;
+          userSelect.style.borderColor = '#4CAF50';
+        } else {
+          userSelect.style.borderColor = '#f44336';
+        }
+      });
+
+      // Вывод результата
+      if (correct === total) {
+        resultDiv.className = 'result correct';
+        resultDiv.textContent = `Отлично! Все ответы правильные (${correct} из ${total}).`;
+      } else {
+        resultDiv.className = 'result incorrect';
+        resultDiv.textContent = `Есть ошибки. Правильно: ${correct} из ${total}.`;
+      }
+    }
+
+    // Инициализация при загрузке
+    window.onload = renderWordFields;
+  </script>
+
+</html>
